@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head><title>Админка</title></head>
+<body>
+<h2>Добро пожаловать в админ-панель</h2>
+<a href="/logout">Выйти</a>
+<hr>
+<h3>Список товаров</h3>
+<table border="1" cellpadding="5">
+<tr><th>ID</th><th>Название</th><th>Размер</th><th>Город</th><th>Состояние</th><th>Контакт</th></tr>
+{% for item in items %}
+<tr>
+    <td>{{ item.id }}</td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.size }}</td>
+    <td>{{ item.city }}</td>
+    <td>{{ item.condition }}</td>
+    <td>{{ item.contact }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
